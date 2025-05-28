@@ -72,9 +72,7 @@ POST /api/auth/register/
 2. Login User
 POST /api/auth/login/
 
-json
-Copy
-Edit
+
 {
   "email": "john@example.com",
   "password": "strongpassword123"
@@ -86,9 +84,7 @@ Requires JWT Token
 POST /api/patients/
 Header: Authorization: Bearer <your_jwt_token>
 
-json
-Copy
-Edit
+
 {
   "name": "Jane Smith",
   "email": "jane@example.com",
@@ -115,9 +111,7 @@ Requires JWT Token
 POST /api/doctors/
 Header: Authorization: Bearer <your_jwt_token>
 
-json
-Copy
-Edit
+
 {
   "name": "Dr. Smith",
   "email": "dr.smith@hospital.com",
@@ -147,9 +141,6 @@ Requires JWT Token
 POST /api/mappings/
 Header: Authorization: Bearer <your_jwt_token>
 
-json
-Copy
-Edit
 {
   "patient": 1,
   "doctor": 1,
@@ -203,7 +194,18 @@ CORS headers to control frontend access
 Sensitive config managed via environment variables
 
 🧪 Testing
-You can use Postman or cURL to test all endpoints. Use the /api/auth/login/ endpoint to get a JWT token, and include it in the Authorization header as Bearer <your_token> for protected routes.
+
+You can use Postman, cURL, or Swagger UI to test all API endpoints.
+
+- Use the `/api/auth/login/` endpoint to get a JWT token.
+- Include the token in the Authorization header as `Bearer <your_token>` for protected routes.
+
+### Swagger UI
+For an interactive API documentation and testing interface, open:
+
+[http://127.0.0.1:8000/swagger/](http://127.0.0.1:8000/swagger/)
+
+This UI allows you to explore all endpoints, see request/response schemas, and execute requests directly from your browser
 
 📬 Contact
 For any questions or suggestions, feel free to connect with the developer.
